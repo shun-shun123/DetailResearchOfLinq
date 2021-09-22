@@ -5,7 +5,7 @@ namespace DetailResearchOfLinq
 {
     public class DistinctUseCase : BaseUseCase
     {
-        public class UserComparer : IEqualityComparer<User>
+        private class UserComparer : IEqualityComparer<User>
         {
             public bool Equals(User x, User y)
             {
