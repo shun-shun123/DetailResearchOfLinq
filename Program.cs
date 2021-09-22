@@ -44,6 +44,15 @@
 
             var elementAtOrDefault = new ElementAtOrDefaultUseCase(10);
             elementAtOrDefault.Execute();
+
+            var empty = new EmptyUseCase(10);
+            empty.Execute();
+
+            var except = new ExceptUseCase(10);
+            except.Execute();
+
+            var first = new FirstUseCase(10);
+            first.Execute();
         }
     }
 }
