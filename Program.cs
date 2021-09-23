@@ -163,6 +163,9 @@ namespace DetailResearchOfLinq
 
             var toLookup = new ToLookupUseCase(10);
             toLookup.Execute();
+
+            var union = new UnionUseCase(10);
+            union.Execute();
         }
     }
 }
