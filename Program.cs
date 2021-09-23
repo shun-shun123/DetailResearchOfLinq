@@ -53,6 +53,12 @@
 
             var first = new FirstUseCase(10);
             first.Execute();
+
+            var firstOrDefault = new FirstOrDefaultUseCase(10);
+            firstOrDefault.Execute();
+
+            var groupBy = new GroupByUseCase(50);
+            groupBy.Execute();
         }
     }
 }

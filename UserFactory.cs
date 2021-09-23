@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,6 +23,18 @@ namespace DetailResearchOfLinq
             }
 
             return ret;
+        }
+
+        public static User[] CreateRandomUserArray(int count)
+        {
+            var rand = new Random(0);
+            User[] users = new User[count];
+            for (var i = 0; i < users.Length; i++)
+            {
+                users[i] = new User((ulong) i, $"User_{i}", rand.Next(10, 30));
+            }
+
+            return users;
         }
     }
 }
