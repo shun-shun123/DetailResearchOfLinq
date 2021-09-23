@@ -130,6 +130,9 @@ namespace DetailResearchOfLinq
 
             var skipWhile = new SkipWhileUseCase(10);
             skipWhile.Execute();
+
+            var sum = new SumUseCase(10);
+            sum.Execute();
         }
     }
 }
