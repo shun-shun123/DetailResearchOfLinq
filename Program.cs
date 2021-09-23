@@ -1,4 +1,6 @@
-﻿using DetailResearchOfLinq.UseCase;
+﻿using BenchmarkDotNet.Running;
+using DetailResearchOfLinq.Benchmark;
+using DetailResearchOfLinq.UseCase;
 
 namespace DetailResearchOfLinq
 {
@@ -7,7 +9,15 @@ namespace DetailResearchOfLinq
         static void Main(string[] args)
         {
             LogUtility.LogLevel = LogUtility.ALL;
-            
+            var switcher = new BenchmarkSwitcher(new[]
+            {
+                typeof(FirstOrDefaultBenchmark)
+            });
+            switcher.Run(args);
+        }
+
+        private static void ExampleUseOfLinq()
+        {
             var aggregate = new AggregateUseCase(10);
             aggregate.Execute();
 
