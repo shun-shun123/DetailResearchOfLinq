@@ -73,6 +73,9 @@ namespace DetailResearchOfLinq
 
             var last = new LastUseCase(10);
             last.Execute();
+
+            var lastOrDefault = new LastOrDefault(10);
+            lastOrDefault.Execute();
         }
     }
 }
