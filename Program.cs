@@ -142,6 +142,9 @@ namespace DetailResearchOfLinq
 
             var takeWhile = new TakeWhileUseCase(10);
             takeWhile.Execute();
+
+            var thenBy = new ThenByUseCase(10);
+            thenBy.Execute();
         }
     }
 }
