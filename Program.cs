@@ -112,6 +112,9 @@ namespace DetailResearchOfLinq
 
             var selectMany = new SelectManyUseCase(10);
             selectMany.Execute();
+
+            var sequenceEqual = new SequenceEqualUseCase(10);
+            sequenceEqual.Execute();
         }
     }
 }
