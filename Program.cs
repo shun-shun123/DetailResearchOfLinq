@@ -148,6 +148,9 @@ namespace DetailResearchOfLinq
 
             var thenByDescending = new ThenByDescendingUseCase(10);
             thenByDescending.Execute();
+
+            var toArray = new ToArrayUseCase(10);
+            toArray.Execute();
         }
     }
 }
