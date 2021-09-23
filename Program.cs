@@ -136,6 +136,9 @@ namespace DetailResearchOfLinq
 
             var take = new TakeUseCase(10);
             take.Execute();
+
+            var takeLast = new TakeLastUseCase(10);
+            takeLast.Execute();
         }
     }
 }
