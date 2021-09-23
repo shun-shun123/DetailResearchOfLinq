@@ -62,6 +62,9 @@
 
             var groupJoin = new GroupJoinUseCase(10);
             groupJoin.Execute();
+
+            var intersect = new IntersectUseCase(10);
+            intersect.Execute();
         }
     }
 }
