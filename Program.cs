@@ -160,6 +160,9 @@ namespace DetailResearchOfLinq
 
             var toList = new ToListUseCase(10);
             toList.Execute();
+
+            var toLookup = new ToLookupUseCase(10);
+            toLookup.Execute();
         }
     }
 }
