@@ -14,5 +14,10 @@ namespace DetailResearchOfLinq.Data
             Name = name;
             Age = age;
         }
+
+        public override string ToString()
+        {
+            return $"{Id}, {Name}, {Age}";
+        }
     }
 }

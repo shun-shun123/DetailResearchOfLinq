@@ -70,6 +70,9 @@ namespace DetailResearchOfLinq
 
             var join = new JoinUseCase(10);
             join.Execute();
+
+            var last = new LastUseCase(10);
+            last.Execute();
         }
     }
 }
