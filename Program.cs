@@ -169,6 +169,9 @@ namespace DetailResearchOfLinq
 
             var where = new WhereUseCase(10);
             where.Execute();
+
+            var zip = new ZipUseCase(10);
+            zip.Execute();
         }
     }
 }
