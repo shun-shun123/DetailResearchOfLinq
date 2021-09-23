@@ -151,6 +151,9 @@ namespace DetailResearchOfLinq
 
             var toArray = new ToArrayUseCase(10);
             toArray.Execute();
+
+            var toDictionary = new ToDictionaryUseCase(10);
+            toDictionary.Execute();
         }
     }
 }
