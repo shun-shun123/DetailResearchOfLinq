@@ -59,6 +59,9 @@
 
             var groupBy = new GroupByUseCase(50);
             groupBy.Execute();
+
+            var groupJoin = new GroupJoinUseCase(10);
+            groupJoin.Execute();
         }
     }
 }
