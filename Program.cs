@@ -154,6 +154,9 @@ namespace DetailResearchOfLinq
 
             var toDictionary = new ToDictionaryUseCase(10);
             toDictionary.Execute();
+
+            var toHashSet = new ToHashSetUseCase(10);
+            toHashSet.Execute();
         }
     }
 }
