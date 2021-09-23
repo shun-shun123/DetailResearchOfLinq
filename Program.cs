@@ -85,6 +85,9 @@ namespace DetailResearchOfLinq
 
             var min = new MinUseCase(10);
             min.Execute();
+
+            var ofType = new OfTypeUseCase(10);
+            ofType.Execute();
         }
     }
 }
