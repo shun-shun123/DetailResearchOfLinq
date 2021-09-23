@@ -118,6 +118,9 @@ namespace DetailResearchOfLinq
 
             var single = new SingleUseCase(10);
             single.Execute();
+
+            var singleOrDefault = new SingleOrDefaultUseCase(10);
+            singleOrDefault.Execute();
         }
     }
 }
