@@ -91,6 +91,12 @@ namespace DetailResearchOfLinq
 
             var orderBy = new OrderByUseCase(10);
             orderBy.Execute();
+
+            var descendingOrderBy = new OrderByDescendingUseCase(10);
+            descendingOrderBy.Execute();
+
+            var prepend = new PrependUseCase(10);
+            prepend.Execute();
         }
     }
 }
