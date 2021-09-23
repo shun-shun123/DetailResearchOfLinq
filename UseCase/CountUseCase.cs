@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace DetailResearchOfLinq
+namespace DetailResearchOfLinq.UseCase
 {
     public class CountUseCase : BaseUseCase
     {

@@ -1,9 +1,8 @@
 using System.Linq;
 using DetailResearchOfLinq.Data;
 using DetailResearchOfLinq.Utility;
-using Microsoft.VisualBasic;
 
-namespace DetailResearchOfLinq
+namespace DetailResearchOfLinq.UseCase
 {
     public class GroupByUseCase : BaseUseCase
     {

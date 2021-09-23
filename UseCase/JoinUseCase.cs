@@ -1,4 +1,4 @@
-namespace DetailResearchOfLinq
+namespace DetailResearchOfLinq.UseCase
 {
     public class JoinUseCase
     {

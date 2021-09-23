@@ -1,7 +1,7 @@
 using DetailResearchOfLinq.Data;
 using DetailResearchOfLinq.Utility;
 
-namespace DetailResearchOfLinq
+namespace DetailResearchOfLinq.UseCase
 {
     public abstract class BaseUseCase
     {

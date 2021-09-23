@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using DetailResearchOfLinq.Data;
 
-namespace DetailResearchOfLinq
+namespace DetailResearchOfLinq.UseCase
 {
     public class FirstOrDefaultUseCase : BaseUseCase
     {

@@ -1,7 +1,6 @@
-using System;
 using System.Linq;
 
-namespace DetailResearchOfLinq
+namespace DetailResearchOfLinq.UseCase
 {
     public class CastUseCase : BaseUseCase
     {

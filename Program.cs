@@ -1,4 +1,6 @@
-﻿namespace DetailResearchOfLinq
+﻿using DetailResearchOfLinq.UseCase;
+
+namespace DetailResearchOfLinq
 {
     class Program
     {

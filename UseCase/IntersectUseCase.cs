@@ -3,7 +3,7 @@ using System.Linq;
 using DetailResearchOfLinq.Data;
 using DetailResearchOfLinq.Utility;
 
-namespace DetailResearchOfLinq
+namespace DetailResearchOfLinq.UseCase
 {
     public class IntersectUseCase : BaseUseCase
     {
