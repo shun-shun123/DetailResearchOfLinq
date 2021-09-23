@@ -1,4 +1,5 @@
 using DetailResearchOfLinq.Data;
+using DetailResearchOfLinq.Utility;
 
 namespace DetailResearchOfLinq
 {

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DetailResearchOfLinq.Data;
+using DetailResearchOfLinq.Utility;
 
 namespace DetailResearchOfLinq
 {
