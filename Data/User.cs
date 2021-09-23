@@ -17,7 +17,7 @@ namespace DetailResearchOfLinq.Data
 
         public override string ToString()
         {
-            return $"{Id}, {Name}, {Age}";
+            return $"(Id: {Id}, Name: {Name}, Age: {Age})";
         }
     }
 }

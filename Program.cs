@@ -127,6 +127,9 @@ namespace DetailResearchOfLinq
 
             var skipLast = new SkipLastUseCase(10);
             skipLast.Execute();
+
+            var skipWhile = new SkipWhileUseCase(10);
+            skipWhile.Execute();
         }
     }
 }
