@@ -5,5 +5,10 @@ namespace DetailResearchOfLinq.Data
         public string Name;
         
         public Person Owner;
+
+        public override string ToString()
+        {
+            return $"{Name}(Owner: {Owner.Name})";
+        }
     }
 }

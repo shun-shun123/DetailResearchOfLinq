@@ -109,6 +109,9 @@ namespace DetailResearchOfLinq
 
             var select = new SelectUseCase(10);
             select.Execute();
+
+            var selectMany = new SelectManyUseCase(10);
+            selectMany.Execute();
         }
     }
 }
