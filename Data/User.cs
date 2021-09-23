@@ -1,4 +1,4 @@
-namespace DetailResearchOfLinq
+namespace DetailResearchOfLinq.Data
 {
     public sealed class User
     {

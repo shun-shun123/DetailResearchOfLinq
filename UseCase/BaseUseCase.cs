@@ -1,3 +1,5 @@
+using DetailResearchOfLinq.Data;
+
 namespace DetailResearchOfLinq
 {
     public abstract class BaseUseCase
