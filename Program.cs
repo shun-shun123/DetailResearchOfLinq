@@ -115,6 +115,9 @@ namespace DetailResearchOfLinq
 
             var sequenceEqual = new SequenceEqualUseCase(10);
             sequenceEqual.Execute();
+
+            var single = new SingleUseCase(10);
+            single.Execute();
         }
     }
 }
