@@ -121,6 +121,9 @@ namespace DetailResearchOfLinq
 
             var singleOrDefault = new SingleOrDefaultUseCase(10);
             singleOrDefault.Execute();
+
+            var skip = new SkipUseCase(10);
+            skip.Execute();
         }
     }
 }
