@@ -166,6 +166,9 @@ namespace DetailResearchOfLinq
 
             var union = new UnionUseCase(10);
             union.Execute();
+
+            var where = new WhereUseCase(10);
+            where.Execute();
         }
     }
 }
