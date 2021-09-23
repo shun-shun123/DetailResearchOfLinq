@@ -82,6 +82,9 @@ namespace DetailResearchOfLinq
 
             var max = new MaxUseCase(10);
             max.Execute();
+
+            var min = new MinUseCase(10);
+            min.Execute();
         }
     }
 }
