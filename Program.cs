@@ -79,6 +79,9 @@ namespace DetailResearchOfLinq
 
             var longCount = new LongCountUseCase(10);
             longCount.Execute();
+
+            var max = new MaxUseCase(10);
+            max.Execute();
         }
     }
 }
