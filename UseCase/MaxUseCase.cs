@@ -16,6 +16,7 @@ namespace DetailResearchOfLinq.UseCase
             Max01();
             Max02();
             Max03();
+            Max04();
         }
 
         private void Max01()
@@ -24,6 +25,15 @@ namespace DetailResearchOfLinq.UseCase
             // 単純にシーケンスの中で一番大きい値を取得する
             var max = numbers.Max();
             LogUtility.Log($"max: {max}");
+
+            // selectorを指定することで、比較する際に処理を挟める
+            // selectorで処理を行われた後の値が返ってくる
+            var divideMax = numbers.Max(i =>
+            {
+                LogUtility.LogDetail($"numbers.Max.Selector: {i} / 2");
+                return i / 2;
+            });
+            LogUtility.Log($"divideMax: {divideMax}");
         }
 
         private void Max02()
@@ -56,6 +66,13 @@ namespace DetailResearchOfLinq.UseCase
             {
                 LogUtility.Log("ここは呼ばれない" + ex.Message);
             }
+        }
+
+        private void Max04()
+        {
+            // Idに対して*-1した結果でMaxを探すので、結果的にはIdの絶対値が一番小さい値を探してくることになる（Idはulongなので）
+            var id = ComparableUsers.Max(user => (int)user.Id * -1);
+            LogUtility.Log($"ComparableUser.Id * -1 Max: {id}");
         }
     }
 }
