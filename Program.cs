@@ -97,6 +97,9 @@ namespace DetailResearchOfLinq
 
             var prepend = new PrependUseCase(10);
             prepend.Execute();
+
+            var range = new RangeUseCase(10);
+            range.Execute();
         }
     }
 }
