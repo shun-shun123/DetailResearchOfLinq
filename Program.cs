@@ -88,6 +88,9 @@ namespace DetailResearchOfLinq
 
             var ofType = new OfTypeUseCase(10);
             ofType.Execute();
+
+            var orderBy = new OrderByUseCase(10);
+            orderBy.Execute();
         }
     }
 }
