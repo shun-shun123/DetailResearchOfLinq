@@ -11,11 +11,14 @@ namespace DetailResearchOfLinq.UseCase
 
         protected Pet[] Pets;
 
+        protected ComparableUser[] ComparableUsers;
+
         protected BaseUseCase(int size)
         {
             Users = UserFactory.CreateUserArray(size);
             Persons = PersonFactory.CreatePersonArray(size);
             Pets = PetFactory.CreatePetArray(size);
+            ComparableUsers = ComparableUserFactory.CreateComparableUserInRandomOrder(size);
         }
 
         public virtual void Execute()
