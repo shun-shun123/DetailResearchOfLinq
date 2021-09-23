@@ -145,6 +145,9 @@ namespace DetailResearchOfLinq
 
             var thenBy = new ThenByUseCase(10);
             thenBy.Execute();
+
+            var thenByDescending = new ThenByDescendingUseCase(10);
+            thenByDescending.Execute();
         }
     }
 }
