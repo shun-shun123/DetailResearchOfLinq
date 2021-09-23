@@ -100,6 +100,9 @@ namespace DetailResearchOfLinq
 
             var range = new RangeUseCase(10);
             range.Execute();
+
+            var repeat = new RepeatUseCase(10);
+            repeat.Execute();
         }
     }
 }
