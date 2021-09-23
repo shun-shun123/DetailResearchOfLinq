@@ -67,6 +67,9 @@ namespace DetailResearchOfLinq
 
             var intersect = new IntersectUseCase(10);
             intersect.Execute();
+
+            var join = new JoinUseCase(10);
+            join.Execute();
         }
     }
 }

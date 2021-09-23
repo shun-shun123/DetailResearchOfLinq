@@ -6,7 +6,7 @@ namespace DetailResearchOfLinq.Utility
     public static class PersonFactory
     {
         public static Person[] CreatePersonArray(int count) => Enumerable.Range(0, count)
-            .Select(i => new Person {Name = $"Person_{(i % 3)}"})
+            .Select(i => new Person {Name = $"Person_{i}"})
             .ToArray();
     }
 }
