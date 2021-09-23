@@ -103,6 +103,9 @@ namespace DetailResearchOfLinq
 
             var repeat = new RepeatUseCase(10);
             repeat.Execute();
+
+            var reverse = new ReverseUseCase(10);
+            reverse.Execute();
         }
     }
 }
