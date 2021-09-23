@@ -133,6 +133,9 @@ namespace DetailResearchOfLinq
 
             var sum = new SumUseCase(10);
             sum.Execute();
+
+            var take = new TakeUseCase(10);
+            take.Execute();
         }
     }
 }
