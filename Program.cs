@@ -11,6 +11,7 @@ namespace DetailResearchOfLinq
             LogUtility.LogLevel = LogUtility.ALL;
             var switcher = new BenchmarkSwitcher(new[]
             {
+                typeof(CountBenchmark),
                 typeof(FirstOrDefaultBenchmark)
             });
             switcher.Run(args);
