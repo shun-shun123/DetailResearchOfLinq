@@ -25,5 +25,45 @@ namespace DetailResearchOfLinq.Benchmark
                 var _ = Enumerable.FirstOrDefault(NumbersArray, n => n == target);
             }
         }
+
+        [Benchmark]
+        public void PrimitiveListImproved()
+        {
+            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
+            {
+                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var _ = NumbersList.FirstOrDefault(n => n == target);
+            }
+        }
+
+        [Benchmark]
+        public void PrimitiveList()
+        {
+            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
+            {
+                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var _ = Enumerable.FirstOrDefault(NumbersList, n => n == target);
+            }
+        }
+
+        [Benchmark]
+        public void PrimitiveDictionaryImproved()
+        {
+            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
+            {
+                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var _ = NumbersDict.FirstOrDefault(n => n.Value == target);
+            }
+        }
+
+        [Benchmark]
+        public void PrimitiveDictionary()
+        {
+            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
+            {
+                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var _ = Enumerable.FirstOrDefault(NumbersDict, n => n.Value == target);
+            }
+        }
     }
 }
