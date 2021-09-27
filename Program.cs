@@ -1,5 +1,6 @@
 ﻿using BenchmarkDotNet.Running;
 using DetailResearchOfLinq.Benchmark;
+using DetailResearchOfLinq.Benchmark.Sandbox;
 using DetailResearchOfLinq.UseCase;
 
 namespace DetailResearchOfLinq
@@ -12,7 +13,8 @@ namespace DetailResearchOfLinq
             var switcher = new BenchmarkSwitcher(new[]
             {
                 typeof(CountBenchmark),
-                typeof(FirstOrDefaultBenchmark)
+                typeof(FirstOrDefaultBenchmark),
+                typeof(LinqVsPureLogicBenchmark)
             });
             switcher.Run(args);
         }

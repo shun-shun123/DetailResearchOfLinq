@@ -11,6 +11,8 @@ namespace DetailResearchOfLinq.Benchmark
     {
         protected int[] NumbersArray;
 
+        protected int[] RandomIndexes;
+
         protected List<int> NumbersList;
 
         protected Dictionary<int, int> NumbersDict;
@@ -29,6 +31,11 @@ namespace DetailResearchOfLinq.Benchmark
                     number => number);
 
             Rand = new Random();
+            RandomIndexes = new int[BenchmarkConfig.DATA_SIZE];
+            for (var i = 0; i < RandomIndexes.Length; i++)
+            {
+                RandomIndexes[i] = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+            }
         }
     }
 }

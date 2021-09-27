@@ -11,7 +11,7 @@ namespace DetailResearchOfLinq.Benchmark
         {
             for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
             {
-                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var target = RandomIndexes[i];
                 var _ = NumbersArray.FirstOrDefault(n => n == target);
             }
         }
@@ -21,7 +21,7 @@ namespace DetailResearchOfLinq.Benchmark
         {
             for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
             {
-                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var target = RandomIndexes[i];
                 var _ = Enumerable.FirstOrDefault(NumbersArray, n => n == target);
             }
         }
@@ -31,7 +31,7 @@ namespace DetailResearchOfLinq.Benchmark
         {
             for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
             {
-                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var target = RandomIndexes[i];
                 var _ = NumbersList.FirstOrDefault(n => n == target);
             }
         }
@@ -41,7 +41,7 @@ namespace DetailResearchOfLinq.Benchmark
         {
             for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
             {
-                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var target = RandomIndexes[i];
                 var _ = Enumerable.FirstOrDefault(NumbersList, n => n == target);
             }
         }
@@ -51,7 +51,7 @@ namespace DetailResearchOfLinq.Benchmark
         {
             for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
             {
-                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var target = RandomIndexes[i];
                 var _ = NumbersDict.FirstOrDefault(n => n.Value == target);
             }
         }
@@ -61,7 +61,7 @@ namespace DetailResearchOfLinq.Benchmark
         {
             for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
             {
-                var target = Rand.Next(0, BenchmarkConfig.DATA_SIZE);
+                var target = RandomIndexes[i];
                 var _ = Enumerable.FirstOrDefault(NumbersDict, n => n.Value == target);
             }
         }
