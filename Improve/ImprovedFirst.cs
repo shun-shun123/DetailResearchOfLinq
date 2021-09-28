@@ -3,74 +3,74 @@ using System.Collections.Generic;
 
 public static partial class ImprovedLinq
 {
-    public static int Count<TSource>(this TSource[] source)
+    public static T First<T>(this T[] source)
     {
         if (source == null) throw new ArgumentNullException(nameof(source));
-        return source.Length;
+        if (source.Length == 0) throw new InvalidOperationException();
+        return source[0];
     }
 
-    public static int Count<TSource>(
-        this TSource[] source,
-        Func<TSource, bool> predicate)
+    public static T First<T>(this T[] source, Func<T, bool> predicate)
     {
         if (source == null) throw new ArgumentNullException(nameof(source));
         if (predicate == null) throw new ArgumentNullException(nameof(predicate));
-        int count = 0;
         foreach (var element in source)
         {
             if (predicate(element))
             {
-                count++;
+                return element;
             }
         }
 
-        return count;
+        throw new InvalidOperationException();
     }
 
-    public static int Count<TSource>(this List<TSource> source)
+    public static T First<T>(this List<T> source)
     {
         if (source == null) throw new ArgumentNullException(nameof(source));
-        return source.Count;
+        if (source.Count == 0) throw new InvalidOperationException();
+        return source[0];
     }
 
-    public static int Count<TSource>(
-        this List<TSource> source,
-        Func<TSource, bool> predicate)
+    public static T First<T>(this List<T> source, Func<T, bool> predicate)
     {
         if (source == null) throw new ArgumentNullException(nameof(source));
         if (predicate == null) throw new ArgumentNullException(nameof(predicate));
-        int count = 0;
         foreach (var element in source)
         {
             if (predicate(element))
             {
-                count++;
+                return element;
             }
         }
 
-        return count;
+        throw new InvalidOperationException();
     }
 
-    public static int Count<TKey, TValue>(this Dictionary<TKey, TValue> source)
+    public static KeyValuePair<TKey, TValue> First<TKey, TValue>(this Dictionary<TKey, TValue> source)
     {
         if (source == null) throw new ArgumentNullException(nameof(source));
-        return source.Count;
+        foreach (var elem in source)
+        {
+            return elem;
+        }
+
+        throw new InvalidOperationException();
     }
 
-    public static int Count<TKey, TValue>(this Dictionary<TKey, TValue> source,
+    public static KeyValuePair<TKey, TValue> First<TKey, TValue>(this Dictionary<TKey, TValue> source,
         Func<KeyValuePair<TKey, TValue>, bool> predicate)
     {
         if (source == null) throw new ArgumentNullException(nameof(source));
         if (predicate == null) throw new ArgumentNullException(nameof(predicate));
-        int count = 0;
-        foreach (var pair in source)
+        foreach (var element in source)
         {
-            if (predicate(pair))
+            if (predicate(element))
             {
-                count++;
+                return element;
             }
         }
 
-        return count;
+        throw new InvalidOperationException();
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
+using DetailResearchOfLinq.Data;
 using DetailResearchOfLinq.Utility;
 
 namespace DetailResearchOfLinq.Benchmark
@@ -13,11 +14,15 @@ namespace DetailResearchOfLinq.Benchmark
 
         protected int[] RandomIndexes;
 
+        protected User[] UsersArray;
+
         protected List<int> NumbersList;
 
         protected Dictionary<int, int> NumbersDict;
 
         protected Random Rand;
+
+        protected User TargetUser = new User(1000, "User_1000", 10);
         
         [GlobalSetup]
         public void Setup()
@@ -25,6 +30,8 @@ namespace DetailResearchOfLinq.Benchmark
             NumbersArray = PrimitiveDataFactory.CreateNumberSequenceByArray(BenchmarkConfig.DATA_SIZE);
 
             NumbersList = PrimitiveDataFactory.CreateNumberSequenceByArray(BenchmarkConfig.DATA_SIZE).ToList();
+
+            UsersArray = UserFactory.CreateUserArray(BenchmarkConfig.DATA_SIZE);
 
             NumbersDict = PrimitiveDataFactory.CreateNumberSequenceByArray(BenchmarkConfig.DATA_SIZE)
                 .ToDictionary(number => number,

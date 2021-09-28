@@ -65,5 +65,41 @@ namespace DetailResearchOfLinq.Benchmark
                 var _ = Enumerable.FirstOrDefault(NumbersDict, n => n.Value == target);
             }
         }
+
+        [Benchmark]
+        public void PrimitiveArraySimpleFirstOrDefaultImproved()
+        {
+            var _ = NumbersArray.FirstOrDefault();
+        }
+
+        [Benchmark]
+        public void PrimitiveArraySimpleFirstOrDefault()
+        {
+            var _ = Enumerable.FirstOrDefault(NumbersArray);
+        }
+
+        [Benchmark]
+        public void PrimitiveListSimpleFirstOrDefaultImproved()
+        {
+            var _ = NumbersList.FirstOrDefault();
+        }
+
+        [Benchmark]
+        public void PrimitiveListSimpleFistOrDefault()
+        {
+            var _ = Enumerable.FirstOrDefault(NumbersList);
+        }
+
+        [Benchmark]
+        public void PrimitiveDictionarySimpleFirstOrDefaultImproved()
+        {
+            var _ = NumbersDict.FirstOrDefault();
+        }
+
+        [Benchmark]
+        public void PrimitiveDictionarySimpleFirstOrDefault()
+        {
+            var _ = Enumerable.FirstOrDefault(NumbersDict);
+        }
     }
 }

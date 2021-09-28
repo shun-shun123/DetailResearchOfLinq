@@ -9,55 +9,73 @@ namespace DetailResearchOfLinq.Benchmark
         [Benchmark]
         public void PrimitiveArrayImproved()
         {
-            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
-            {
-                var count = NumbersArray.Count(j => j % 2 == 0);
-            }
+            var count = NumbersArray.Count(j => j % 2 == 0);
+        }
+
+        [Benchmark]
+        public void PrimitiveArraySimpleCountImproved()
+        {
+            var _ = NumbersArray.Count();
         }
 
         [Benchmark]
         public void PrimitiveArray()
         {
-            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
-            {
-                var count = Enumerable.Count(NumbersArray, j => j % 2 == 0);
-            }
+            var count = Enumerable.Count(NumbersArray, j => j % 2 == 0);
+        }
+
+        [Benchmark]
+        public void PrimitiveArraySimpleCount()
+        {
+            var _ = Enumerable.Count(NumbersArray);
         }
 
         [Benchmark]
         public void PrimitiveListImproved()
         {
-            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
-            {
-                var count = NumbersList.Count(j => j % 2 == 0);
-            }
+            var count = NumbersList.Count(j => j % 2 == 0);
+        }
+
+        [Benchmark]
+        public void PrimitiveListSimpleCountImproved()
+        {
+            var _ = NumbersList.Count();
         }
 
         [Benchmark]
         public void PrimitiveList()
         {
-            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
-            {
-                var count = Enumerable.Count(NumbersList, j => j % 2 == 0);
-            }
+            var count = Enumerable.Count(NumbersList, j => j % 2 == 0);
+        }
+
+        [Benchmark]
+        public void PrimitiveListSimpleCount()
+        {
+            var _ = Enumerable.Count(NumbersList);
         }
 
         [Benchmark]
         public void PrimitiveDictionaryImproved()
         {
-            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
-            {
-                var count = NumbersDict.Count(j => j.Value % 2 == 0);
-            }
+            var count = NumbersDict.Count(j => j.Value % 2 == 0);
+        }
+
+        [Benchmark]
+        public void PrimitiveDictionarySimpleCountImproved()
+        {
+            var _ = NumbersDict.Count();
         }
 
         [Benchmark]
         public void PrimitiveDictionary()
         {
-            for (var i = 0; i < BenchmarkConfig.TRY_COUNT; i++)
-            {
-                var count = Enumerable.Count(NumbersDict, j => j.Value % 2 == 0);
-            }
+            var count = Enumerable.Count(NumbersDict, j => j.Value % 2 == 0);
+        }
+
+        [Benchmark]
+        public void PrimitiveDictionarySimpleCount()
+        {
+            var _ = Enumerable.Count(NumbersDict);
         }
     }
 }
